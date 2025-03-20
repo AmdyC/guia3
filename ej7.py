@@ -1,11 +1,11 @@
-def add_task(task_list):
+def add(task_list):
     description = input("Ingrese la descripción de la tarea: ")
-    deadline = input("Ingrese la fecha límite (YYYY-MM-DD): ")
+    deadline = input("Ingrese la fecha límite (DD-MM-YYYY): ")
     priority = input("Ingrese la prioridad (Alta/Media/Baja): ")
     task_list.append({"Descripción": description, "Fecha límite": deadline, "Prioridad": priority})
     print("\nTarea agregada con éxito!\n")
 
-def show_tasks(task_list):
+def show(task_list):
     if not task_list:
         print("\nNo hay tareas registradas.\n")
     else:
@@ -19,9 +19,9 @@ def main():
     while True:
         option = input("1. Agregar tarea\n2. Mostrar tareas\n3. Salir\nSeleccione una opción: ")
         if option == "1":
-            add_task(tasks)
+            add(tasks)
         elif option == "2":
-            show_tasks(tasks)
+            show(tasks)
         elif option == "3":
             print("Saliendo del programa...")
             break

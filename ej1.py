@@ -1,7 +1,9 @@
-lista=[ {"ID":1,"Value":"nothing","Nombre":"Andy", "Edad":17 },
-        {"ID":2,"Value":"something","Nombre":"Nicolas", "Edad":16}]
+lista=[ {"Nombre":"Andy", "Edad":17 },
+        {"Nombre":"Castillo", "Edad":16}]
 print(lista[0]["Nombre"])
 print(lista[1]["Edad"])
-for x in range(len(lista)):
-    print(lista[x]["ID"])
-    print(lista[x]["Value"])
+print(lista[0])
+for x in lista:
+    print(lista.index(x))
+    for key in x:
+        print(key,x[key])
